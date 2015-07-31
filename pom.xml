@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jquery-window</artifactId>
-    <version>5.0.4-SNAPSHOT</version>
+    <version>5.0.4</version>
     <name>jQuery Window</name>
     <description>WebJar for jQuery Window</description>
     <url>http://webjars.org</url>
@@ -58,7 +58,7 @@
         <url>http://github.com/webjars/jquery-window</url>
         <connection>scm:git:https://github.com/webjars/jquery-window.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/jquery-window.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>jquery-window-5.0.4</tag>
     </scm>
     
     <dependencies>
@@ -81,13 +81,13 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.rar"/>
-                                <echo message="unzip archive"/>
-                                <exec command="unrar x ${project.build.directory}/${project.artifactId}.rar" dir="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.rar" />
+                                <echo message="unzip archive" />
+                                <exec command="unrar x ${project.build.directory}/${project.artifactId}.rar" dir="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/window"/>
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/window" />
                                 </move>
                             </target>
                         </configuration>
