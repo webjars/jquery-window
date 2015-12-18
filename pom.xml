@@ -11,15 +11,15 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jquery-window</artifactId>
-    <version>5.0.5-SNAPSHOT</version>
+    <version>5.03-SNAPSHOT</version>
     <name>jQuery Window</name>
     <description>WebJar for jQuery Window</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>5.0.4</upstream.version>
-        <upstream.url>http://fstoke.me/jquery/window/download/jquery-window-5.0.4.rar</upstream.url>
+        <upstream.version>5.03</upstream.version>
+        <upstream.url>http://fstoke.me/jquery/window/download/old/jquery-window-${upstream.version}.rar</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
@@ -87,7 +87,7 @@
                                 <exec command="unrar x ${project.build.directory}/${project.artifactId}.rar" dir="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}/window" />
+                                    <fileset dir="${project.build.directory}/${project.artifactId}-${upstream.version}" />
                                 </move>
                             </target>
                         </configuration>
