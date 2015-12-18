@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jquery-window</artifactId>
-    <version>5.03-SNAPSHOT</version>
+    <version>5.03</version>
     <name>jQuery Window</name>
     <description>WebJar for jQuery Window</description>
     <url>http://webjars.org</url>
@@ -58,7 +58,7 @@
         <url>http://github.com/webjars/jquery-window</url>
         <connection>scm:git:https://github.com/webjars/jquery-window.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/jquery-window.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>jquery-window-5.03</tag>
     </scm>
     
     <dependencies>
